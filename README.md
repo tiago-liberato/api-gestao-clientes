@@ -1,6 +1,6 @@
 # API Gestão de Clientes
 ## Objetivo
-O presente projeto consiste em uma atividade prática realizada durante o **Bootcamp Java Santander - 2026**, a qual tem como objeto de estudo o uso de padrões de projetos pelo spring framework. 
+O presente projeto consiste em uma atividade prática realizada durante o **Bootcamp Java Santander - 2026**, a qual tem como objeto de estudo o uso de padrões de projetos pelo spring framework.
 Escolhi como projeto uma API simplificada de gestão de clientes, que fornece operações de CRUD em banco MySQL utilizando Docker, além de consumir a api ViaCep para busca de endereço completo com base no CEP.
 
 
@@ -27,7 +27,7 @@ Escolhi como projeto uma API simplificada de gestão de clientes, que fornece op
 
 ## Pré-requisitos
 
-- [Docker](https://www.docker.com/) 
+- [Docker](https://www.docker.com/)
 - Java 21 (JDK)
 - Maven 3.9+
 
@@ -45,7 +45,7 @@ cd GestaoClientes
 Copie o arquivo de exemplo e ajuste os valores:
 
 ```bash
-cp .env.example .env
+cp .env.exemplo .env
 ```
 
 Edite o `.env` com uma senha de sua escolha:
@@ -55,15 +55,9 @@ MYSQL_DATABASE=DB_Clients
 MYSQL_ROOT_PASSWORD=sua_senha_aqui
 ```
 
-### 3. Suba o banco de dados com Docker
+### 3. Execute a aplicação
 
-```bash
-docker compose up -d
-```
-
-Isso inicia um container MySQL na porta `3307`.
-
-### 4. Execute a aplicação
+O projeto usa `spring-boot-docker-compose`, então o container MySQL é iniciado automaticamente ao rodar a aplicação (não é necessário `docker compose up` manual):
 
 ```bash
 mvn clean spring-boot:run
@@ -73,7 +67,7 @@ O Flyway aplica automaticamente as migrations e cria as tabelas na primeira exec
 
 A aplicação estará disponível em `http://localhost:8080`.
 
-### 5. Acesse a documentação da API
+### 4. Acesse a documentação da API
 
 Com a aplicação rodando, acesse:
 
